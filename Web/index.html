@@ -1,0 +1,61 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<center>
+
+<h1>Edward's stoere chat dinges</h1>
+Om je naam te veranderen typ /setusername GewensteNaamHier<br>
+<textarea cols='60' rows='8' name="cons" type="text" id="console" readonly></textarea><br><br>
+Bericht: <input type="text" autofocus id="message" name="msg" autocomplete="off">
+<button name="snd" id="snd" onclick="sendmsg();">Verstuur</button><br>
+
+<center>
+<script>
+
+var ws = new WebSocket("ws://164.132.228.199:909/server");
+var s = null;
+var textarea = document.getElementById('console');
+
+ws.onopen = function () {
+s = "Connected!";
+document.getElementById("console").value = s;
+}
+ws.onmessage = function(evt) {
+
+s += "\n" + evt.data;
+
+document.getElementById("console").value = s;
+textarea.scrollTop = textarea.scrollHeight;
+}
+
+function sendmsg() {
+var x = document.getElementById("message").value.trim();
+if(x != '')
+{
+
+ws.send(x);
+document.getElementById("snd").disabled = true; 
+document.getElementById("message").disabled = true; 
+setTimeout(function (){
+document.getElementById("snd").disabled = false; 
+document.getElementById("message").disabled = false; 
+document.getElementById("message").focus();
+}, 700);
+}
+
+}
+
+$(document).ready(function(){
+    $('#message').keypress(function(e){
+      if(e.keyCode==13)
+	  {
+		$('#snd').click();
+		document.getElementById("message").value = '';
+	  }
+      
+	 
+    });
+});
+
+
+</script>
+<br><br>

@@ -1,0 +1,7 @@
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\bin\Debug\WSSRV.exe.config
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\bin\Debug\WSSRV.exe
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\bin\Debug\WSSRV.pdb
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\bin\Debug\Fleck.dll
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\obj\Debug\WSSRV.csprojResolveAssemblyReference.cache
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\obj\Debug\WSSRV.exe
+C:\Users\Edward\Documents\SharpDevelop Projects\WSSRV\WSSRV\obj\Debug\WSSRV.pdb
